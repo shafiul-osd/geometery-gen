@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geometry-gem</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+       <div class="flex justify-between px-5 py-3" >
+        <div class="grid grid-cols-3 gap-3">
+          <!-- card area this is -->
+           <div>
+            <!-- triangle area this is -->
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+              <figure>
+                <img
+                  src="images/triangle.png"
+                  alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <p class="text-center text-2xl">triangle</p>
+                <p class="text-center">Area (A) = 0.5 x b x h</p>
+                <div>
+                  <input id="triangle-base" class="w-24 text2xl rounded-sm bg-pink-300 p-2" type=" text" placeholder="b">
+                  <span class="ml-2">cm</span>
+                  <input id="triangle-height" class="w-24 text2xl rounded-sm bg-pink-300 p-2" type="text" placeholder="h">
+                  <span class="ml-2">cm</span>
+                </div>
+                <div class="card-actions justify-end">
+                  <button onclick='triangleCalculted ()' class="btn btn-primary w-full">calculted</button>
+                </div>
+              </div>
+            </div>
+           </div>
+           <div>
+            <!-- ratcangle area start from here -->
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+              <figure>
+                <img
+                  src="images/rectangle.png"
+                  alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <p class="text-center text-2xl">Ratcangle</p>
+                <p class="text-center">Area (A) = w x l</p>
+                <div>
+                  <input id="ratangle-width" class="w-24 text2xl rounded-sm bg-pink-300 p-2" type="text" placeholder="w">
+                  <span class="ml-3">cm</span>
+                  <input id="ratangle-length" class="w-24 text2xl rounded-sm bg-pink-300 p-2" type="text" placeholder="l">
+                  <span class="ml-3">cm</span>
+                </div>
+                <div class="card-actions justify-end">
+                  <button onclick="ratangleCalculted()" class="btn btn-primary w-full">calculted</button>
+                </div>
+              </div>
+            </div>
+           </div>
+           <div class="my-4">
+            <!-- parallegoiem area start from here -->
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+              <figure>
+                <img
+                  src="images/parallelogram.png"
+                  alt="Shoes" />
+              </figure>
+              <div class="card-body">
+             <div>
+              <p class="text-center text-2xl">parallelogram</p>
+              <p class="text-center">Area (A) = b X H</p>
+              <input id="parallelogram-base" class="w-24 text2xl rounded-sm bg-pink-300 p-2" type="text" placeholder="b">
+              <span class="ml-3">cm</span>
+              <input id="parallegrom-height" class="w-24 text2xl rounded-sm bg-pink-300 p-2" type="text" placeholder="h">
+              <span class="ml-3">cm</span>
+             </div>
+
+                <div class="card-actions justify-end">
+                  <button onclick="parallelogramCalculted()" class="btn btn-primary w-full">calculted</button>
+                </div>
+              </div>
+            </div>
+           </div>
+           <div>
+            <!-- rhombos area start from here -->
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+              <figure>
+                <img
+                  src="images/rhombus.png"
+                  alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <p class="text-center text-2xl">rombos</p>
+                <p class="text-center">Area (A) = 0.5 x d1 x d2</p>
+                <div>
+                  <input id="rombos-d1" class="w-24 text2xl rounded-sm bg-pink-300 p-2" type="text" placeholder="b">
+                  <span class="ml-3">cm</span>
+                  <input id="rombos-d2" class="w-24 text2xl rounded-sm bg-pink-300 p-2" type="text" placeholder="h">
+                  <span class="ml-3">cm</span>
+                </div>
+                <div class="card-actions justify-end">
+                  <button onclick="rombosCalculted()" class="btn btn-primary w-full">calculted</button>
+                </div>
+              </div>
+            </div>
+           </div>
+           <div>
+            <!-- pentagon area start from here -->
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+              <figure>
+                <img
+                  src="images/pentagon.png"
+                  alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <p class="text-2xl text-center">pentagon</p>
+                <p class="text-center">Area (A) = 0.5 x p x b</p>
+                <div>
+                  <input id="pantagon-p" class="w-24 text2xl rounded-sm bg-pink-300 p-2" type="text" placeholder="b">
+                  <span class="ml-3">cm</span>
+                  <input id="pantagon-b" class="w-24 text2xl rounded-sm bg-pink-300 p-2" type="text" placeholder="h">
+                  <span class="ml-3">cm</span>
+                </div>
+                <div class="card-actions justify-end">
+                  <button onclick="pantagonCalculted()" class="btn btn-primary w-full">calculted</button>
+                </div>
+              </div>
+            </div>
+           </div>
+           <div>
+            <!-- elipiess area start from here -->
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+              <figure>
+                <img
+                  src="images/ellipse.png"
+                  alt="Shoes" />
+              </figure>
+              <div class="card-body">
+                <p class="text-2xl text-center">Ellipse</p>
+                <p class="text-center">Area (A) = pai*ab</p>
+                <div>
+                  <input id="ellipes-a" class="w-24 text2xl rounded-sm bg-pink-300 p-2" type="text" placeholder="b">
+                  <span class="ml-3">cm</span>
+                  <input id="ellipes-b" class="w-24 text2xl rounded-sm bg-pink-300 p-2" type="text" placeholder="h">
+                  <span class="ml-3">cm</span>
+                </div>
+                <div class="card-actions justify-end">
+                  <button onclick="ellipesCalculted()" class="btn btn-primary w-full">calculted</button>
+                </div>
+              </div>
+            </div>
+           </div>
+        </div>
+        <div>
+          <!-- calculted area -->
+           
+            <div>
+              <!-- triangle area calculted and show this way -->
+              <p class="text-center">triangle area : <span id="triangle-area-show"></span> <span>cm</span></p>
+            </div>
+            <br>
+            <br>
+            <div>
+              <!-- ratangle area calculted and show this way -->
+               <p class="text-center">ratangle area: <span id="ratangle-area-show"></span> <span>cm</span></p>
+            </div>
+            <br>
+            <br>
+
+            <div>
+            <!-- parallegrom calculted this value and this is the easy way to find  -->
+             <p class="text-center">parallegrom area: <span id="parallegrom-area-show"></span> <span>cm</span></p>
+
+            </div> 
+            <br>
+            <br>
+            <div>
+              <!-- rombos calculted this value and this is the easy way to find -->
+              <p class="text-center">rombos area: <span id="rombos-area-show"></span><span>cm</span></p>
+            </div>
+            <br>
+            <br>
+
+            <div>
+              <!-- pantagon calculted area and this is very easy to find this is more awsome and figure out -->
+               <p class="text-center p-3">pantagon area : <span id="pantagon-area-show"></span><span>cm</span></p>
+            </div>
+            <br>
+            <br>
+            <div>
+              <!-- ellipes calculted area and this is very easy to find this is more awsome and figure out -->
+               <p>ellipes area: <span id="ellipes-area-show"></span><span>cm</span></p>
+            </div>
+
+        </div>
+       </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+</html>
